@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.Heading h1,h2
+{
+	text-align: center;
+}
+.div1,.div2
+{
+	padding: 2em;
+	margin: 2em;
+}
+.div1
+{
+	border: 4px dotted red;
+	width: 33%;
+	float: left;		
+}
+.div2
+{
+	border: 4px dotted red;
+	width: 67%;
+	float: right;	
+}
+.image1
+{
+	float: right;
+	width: 200px;
+}
+.container 
+{
+	padding: 2em;
+	margin: 2em;
+	width: 70%;
+	display: flex;
+	justify-content:center;
+	margin: auto;
+}
+.fixedpara p
+{
+	bottom: 5px;
+}
+.div2 .p1 p
+{
+	padding-top: 110px;
+}
