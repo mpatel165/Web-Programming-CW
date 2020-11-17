@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Login</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+<table>
+<tr>
+    <td>ID : </td>
+<td>
+    <label id="lid"></label> <br>
+    <input type="text" id="id" />
+</td>
+</tr>
+<tr>
+    <td>FirstName : </td>
+<td>
+    <label id="lfirstName"></label> <br>
+    <input type="text" id="firstName" />
+</td>
+</tr>
+<tr>
+    <td>LastName : </td>
+<td>
+    <label id="llastName"></label> <br>
+    <input type="text" id="lastName" />
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+    <input type="button" value="Add" onclick="validate()" />
+</td>
+</tr>
+</table>
+    <div id="details"></div>
+</form>
+<script>
+    function validate() {
+    var flag = 0;
+    var id = document.getElementById("id").value;
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var htmlString = "";
+    if (id == "") {
+    document.getElementById("lid").innerHTML = "Please Enter an ID";
+    document.getElementById("lid").className = "red";
+    htmlString += "ID ";
+    flag = 1;
+}
+    if (firstName == "") {
+    document.getElementById("lfirstName").innerHTML = "Please Enter a First Name";
+    document.getElementById("lfirstName").className = "red";
+    htmlString += "FirstName ";
+    flag = 1;
+}
+    if (lastName == "") {
+    document.getElementById("llastName").innerHTML = "Please Enter a Last Name";
+    document.getElementById("llastName").className = "red";
+    htmlString += "LastName ";
+    flag = 1;
+}
+    if (flag == 1) {
+    alert("You forgot to fill the following field(s) " + htmlString);
+}
+    else { 
+    document.getElementById("details").innerHTML = "ID : " + id + "<br/> First Name : " + firstName + "<br/> Last Name : " + lastName;
+}
+}
+</script>
+</body>
+</html>
